@@ -1,0 +1,23 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url 'https://jitpack.io/' }
+    }
+    dependencies {
+        classpath('com.github.Fox2Code.FoxLoader:dev:1.2.38')
+    }
+}
+
+apply plugin: 'foxloader.dev'
+
+version '1.0.0'
+
+foxloader {
+    // forceReload = true
+    modId = "fastermultiplayer"
+    modName = "FasterMultiplayer"
+    modVersion = project.version
+    modDesc = "Client mod that removes packet processing limit, speeding up chunk loading/teleports"
+    modWebsite = "https://github.com/kivattt/fastermultiplayer"
+    clientMod = "com.kiva.fastermultiplayer.FasterMultiplayerClient"
+}
